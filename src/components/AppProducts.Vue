@@ -5,7 +5,7 @@
 </script>
 
 <template>
-   
+   <main>sono i products</main>
 </template>
 
 

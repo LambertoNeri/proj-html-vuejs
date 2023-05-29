@@ -1,4 +1,28 @@
+/* Set up using Vue 3 */
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+/* import the fontawesome core */
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+/* import font awesome icon component */
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+/* import specific icons */
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faCircleChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faCircleChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons' 
+import { faFacebookF} from "@fortawesome/free-brands-svg-icons"
+import { faTwitter} from "@fortawesome/free-brands-svg-icons"
+import { faInstagram} from "@fortawesome/free-brands-svg-icons"
+import { faYoutube} from "@fortawesome/free-brands-svg-icons"
+
+/* add icons to the library */
+library.add(faUserSecret, faCircleChevronRight, faCircleChevronLeft, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faInstagram, faYoutube)
+
+createApp(App)
+.component('font-awesome-icon', FontAwesomeIcon)
+.mount('#app')
+

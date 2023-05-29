@@ -1,6 +1,6 @@
 <script>
-import AppHeader from './components/AppFooter.Vue';
-import AppProducts from './components/AppFooter.Vue';
+import AppHeader from './components/AppHeader.Vue';
+import AppProducts from './components/AppProducts.Vue';
 import AppFooter from './components/AppFooter.Vue';
 
 export default {

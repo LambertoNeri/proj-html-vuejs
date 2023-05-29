@@ -5,7 +5,8 @@
 </script>
 
 <template>
-   
+    <footer>sono il footer</footer>
+    
 </template>
 
 

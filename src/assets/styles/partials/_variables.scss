@@ -1,0 +1,38 @@
+
+
+@mixin red-font {
+    color: #BF1D2E;
+}
+@mixin red-bg {
+    background-color: #BF1D2E;
+}
+
+@mixin white-font {
+    color: #FFFFFF;
+}
+@mixin white-bg {
+    background-color: #FFFFFF;
+}
+@mixin grey-font {
+    color:  #F3F3F3;
+}
+@mixin grey-bg {
+    background-color: #F3F3F3;
+}
+@mixin black-font {
+    color:  #333333;
+}
+@mixin black-bg {
+    background-color: #333333;
+}
+
+@mixin width-1250{
+    max-width: 1250px;
+    margin-inline: auto;
+}
+
+@mixin flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
