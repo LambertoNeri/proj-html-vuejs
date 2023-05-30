@@ -1,10 +1,12 @@
 <script>
-    import AppSectionOne from './AppSectionOne.vue'
-    import AppSectiontwo from './AppSectionOne.vue'
+    import AppSectionOne from './AppSectionOne.vue';
+    import AppSectiontwo from './AppSectionOne.vue';
+    import AppAdvertising from './AppAdvertising.vue';
     export default {
         components: {
             AppSectionOne,
             AppSectiontwo,
+            AppAdvertising,
         },
         data(){
             return{
@@ -56,11 +58,11 @@
         <div class="carousel-card" v-for="(card, i) in cardArr" :key="i">
             <div class="pill">
                 <div class="multi-pills" v-if="card.typeTwo == 'Stories'">
-                    <span class="type-pill-one">{{ card.type }}</span>
-                    <span class="type-pill-two">{{ card.typeTwo }}</span>
+                    <span class="pill one">{{ card.type }}</span>
+                    <span class="pill two">{{ card.typeTwo }}</span>
                 </div>
                 <div v-else>
-                    <span class="type-pill">{{ card.type }}</span>
+                    <span class="pill three">{{ card.type }}</span>
                 </div>
             </div>
             
@@ -73,6 +75,8 @@
 
     </div>
     <AppSectionOne/>
+    <AppAdvertising/>
+    <AppSectiontwo/>
    </main>
 </template>
 
@@ -119,41 +123,26 @@
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                .type-pill{
+                .pill{
+                    @include pill;
+                }
+                .three{
                     position: absolute;
                     top: 0.5rem;
                     left: calc(50% - 2rem);
                     height: 1.3rem;
-                    background-color: $white;
-                    @include flex-center;
-                    padding-inline: 0.8rem;
-                    border-radius: 5px;
-                    font-size: 0.9rem;
-                    font-weight: 800;
                 }
-                .type-pill-one{
+                .one{
                     position: absolute;
                     top: 0.5rem;
                     right: 52%;
                     height: 1.3rem;
-                    background-color: $white;
-                    @include flex-center;
-                    padding-inline: 0.8rem;
-                    border-radius: 5px;
-                    font-size: 0.9rem;
-                    font-weight: 800;
                 }
-                .type-pill-two{
+                .two{
                     position: absolute;
                     top: 0.5rem;
                     left: 52%;
                     height: 1.3rem;
-                    background-color: $white;
-                    @include flex-center;
-                    padding-inline: 0.8rem;
-                    border-radius: 5px;
-                    font-size: 0.9rem;
-                    font-weight: 800;
                 }
                 img{
                     width: 100%;

@@ -36,3 +36,22 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin pill{
+    @include flex-center;
+    padding-inline: 0.8rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    background-color: white;
+}
+
+@mixin info{
+    @include flex-center;
+    flex-direction: column;
+    position: relative;
+    bottom: 4rem;
+    left: 0;   
+    color: white; 
+    gap: 0.3rem;
+}
