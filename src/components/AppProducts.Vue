@@ -1,5 +1,11 @@
 <script>
+    import AppSectionOne from './AppSectionOne.vue'
+    import AppSectiontwo from './AppSectionOne.vue'
     export default {
+        components: {
+            AppSectionOne,
+            AppSectiontwo,
+        },
         data(){
             return{
                 cardArr: [
@@ -66,6 +72,7 @@
         </div>
 
     </div>
+    <AppSectionOne/>
    </main>
 </template>
 
