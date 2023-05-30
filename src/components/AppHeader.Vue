@@ -1,6 +1,41 @@
 <script>
+   /* import { library } from '@fortawesome/fontawesome-svg-core'
+
+    /* import font awesome icon component 
+    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+    /* import specific icons 
+    import { faBook } from '@fortawesome/free-solid-svg-icons'
+
+    library.add(faBook,)  */
+
     export default {
-        
+        data(){
+            return{
+                menuIcons: [
+                    {  
+                        icon: 'fa-solid fa-house',
+                        menuOption: 'HOME',
+                    },
+                    {  
+                        icon: 'fa-solid fa-suitcase',
+                        menuOption: 'LIFESTYLE',
+                    },
+                    {  
+                        icon: 'fa-solid fa-book-open-reader',
+                        menuOption: 'STORIES',
+                    },
+                    {  
+                        icon: 'fa-solid fa-book',
+                        menuOption: 'PAGES',
+                    },
+                    {  
+                        icon: 'fa-solid fa-user',
+                        menuOption: 'ABOUT US',
+                    },
+                ]
+            };
+        },
     }
 </script>
 
@@ -13,9 +48,8 @@
                     <img class="news-pic" src="../assets/img/external pic/meal-time-150x150.webp" alt="">
                     <div class="news-time">05:35</div>
                     <div class="news-the">THE_</div>
-                   
-            
                 </div>
+
                 <div class="links">
                     <div class="arrows">
                         <font-awesome-icon icon="fa-solid fa-chevron-left"/>
@@ -39,6 +73,34 @@
                             <font-awesome-icon icon="fa-brands fa-youtube"/>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="white-container">
+            <div class="max-width-container">
+                <div class="logo">
+                    <img src="../assets/img/anime-logo-300x89.webp" alt="">
+                </div>
+                <div class="advertise">
+                    <img src="../assets/img/header-banner.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="menu">
+            <div class="max-width-container">
+                <div class="bars">
+                    <font-awesome-icon icon="fa-solid fa-bars" />
+                </div>
+                <div class="menu-voices">
+                    <ul>
+                        <li v-for="(menuVoice, i) in menuIcons" :key="i">
+                            <font-awesome-icon class="icon" :icon='menuIcons[i].icon'/>
+                            <span>{{ menuIcons[i].menuOption }} <font-awesome-icon icon="fa-solid fa-chevron-down" /></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
                 </div>
             </div>
         </div>
@@ -97,7 +159,7 @@
                     justify-content: space-between;
                     color: white;
                     align-items: center;
-                    gap: 3rem;
+                    gap: 2rem;
                     margin-right: 2rem;
                     cursor: pointer;
                 }
@@ -125,5 +187,70 @@
             }
         }
        
+    }
+    .white-container{
+        height: 12vh;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        .max-width-container{
+            @include width-1250;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                img{
+                    max-width: 80%;
+                }
+            }
+            .advertise{
+                img{
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .menu{
+        height: 6vh;
+        .max-width-container{
+            height: 100%;
+            @include width-1250;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .bars{
+                .fa-bars{
+                    font-size: 2rem;
+                }
+            }
+            .menu-voices{
+                ul{
+                  list-style-type: none;
+                  display: flex;
+                  flex-direction: row;
+                  gap: 2rem;
+                  li{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 0.5rem;
+                    .icon{
+                        margin-bottom: 0.2rem;
+                        font-size: 0.9rem;
+                    }
+                    .fa-chevron-down{
+                        font-size: 0.65rem;
+                        margin-bottom: 0.2rem;
+                        font-weight: 800;
+                    }
+                  }
+                }
+
+            }
+            .search{
+                .fa-magnifying-glass{
+                    font-size: 1.7rem;
+                }
+            }
+        }
     }
 </style>
