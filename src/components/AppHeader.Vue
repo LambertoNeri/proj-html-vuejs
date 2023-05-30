@@ -45,7 +45,7 @@
             <div class="max-width-container">
                 <div class="news">
                     <div class="news-text">NEWS UPDATES</div>
-                    <img class="news-pic" src="../assets/img/external pic/meal-time-150x150.webp" alt="">
+                    <img class="news-pic" src="../assets/img/external-pic/meal-time-150x150.webp" alt="">
                     <div class="news-time">05:35</div>
                     <div class="news-the">THE_</div>
                 </div>
