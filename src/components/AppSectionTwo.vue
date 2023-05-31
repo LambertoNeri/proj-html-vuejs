@@ -89,7 +89,13 @@
                     },
                 ],
 
+                videoIndex: 4,
             };
+        },
+        methods: {
+            clicked(element) {
+                this.videoIndex = this.playlistArr.indexOf(element)
+            },
         },
     }
 </script>
@@ -130,7 +136,7 @@
                     <div class="video-header">
                         <div class="logo">
                             <img src="../assets/img/channels4_profile.jpg" alt="">
-                            <span>Overlord Season 4 - Official Trailer 3 | AniTV</span>
+                            <span>{{ playlistArr[videoIndex].description }}</span>
                         </div>
                         <div class="controls">
                             <div class="clickable">
@@ -143,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <img src="../assets/img/sddefault.webp" alt="">
+                    <img :src="playlistArr[videoIndex].img" alt="">
                     <div class="youtube-logo">
                         <font-awesome-icon icon="fa-brands fa-youtube" style="color: #f00000;" />
                     </div>
@@ -158,15 +164,28 @@
                             <font-awesome-icon class="fa" icon="fa-solid fa-play" />
                             <div class="text">
                                 <span>Video Playlist</span>
-                                <span class="video-counter">1/7 Videos</span>
+                                <span class="video-counter">  {{ videoIndex + 1 }}  / {{ playlistArr.length }} Videos</span>
                             </div>
                         </li>
-                        <li v-for="(playlist, i) in playlistArr" :key="i" class="playlist">
-                            <div class="square">{{ i + 1 }}</div>
-                            <div class="pic">
-                                <img :src="playlist.img" alt="">
+                        <li v-for="(playlist, i) in playlistArr" :key="i" class="playlist" @click="clicked(playlist)">
+
+
+                            <div class="container" v-if="i  == videoIndex ">
+                                <div class="square-red">{{ i + 1 }}</div>
+                                <div class="pic">
+                                    <img :src="playlist.img" alt="">
+                                </div>
+                                <span class="title-red">{{ playlist.description }}</span>
                             </div>
-                            <span class="title">{{ playlist.description }}</span>
+
+                            <div class="container" v-else>
+                                <div class="square">{{ i + 1 }}</div>
+                                <div class="pic">
+                                    <img :src="playlist.img" alt="">
+                                </div>
+                                <span class="title">{{ playlist.description }}</span>
+                            </div>
+                           
                         </li>
                     </ul>
                 </div>
@@ -317,7 +336,7 @@
                         z-index: 1000;
                         display: flex;
                         justify-content: space-between;
-                        color: white;
+                        color: $red;
                         align-items: center;
                         .logo{
                             height: 100%;
@@ -420,16 +439,19 @@
                             }
                         }
                         .playlist{
-                            display: flex;
-                            justify-content: space-around;
-                            align-items: center;
-                            gap: 0.5rem;
-                            height: 16%;
-                            border-bottom: 1px black solid;
-                            width: 100%;
-                            padding-inline: 1rem;
-                            background-color: $gray;
-                            .square{
+                           
+                            .container{
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: center;
+                                gap: 0.5rem;
+                                height: 6rem;
+                                border-bottom: 1px black solid;
+                                width: 100%;
+                                padding-inline: 1rem;
+                                background-color: $gray;
+                                cursor: pointer;
+                                .square{
                                 flex-shrink: 0;
                                 height: 25px;
                                 width: 25px;
@@ -437,22 +459,37 @@
                                 background-color: $black;
                                 border-radius: 5px;
                                 color: white;
-                            }
-                            .pic{
-                                flex-grow: 0;
-                                flex-shrink: 0;
-                                height: 75px;
-                                width: 100px;
-                                overflow: hidden;
-                                border-radius: 5px;
-                                img{
-                                border-radius: 10px;
-                                height: 75px;
-                                width: 150px;
-                                scale: 1.5;
-                                object-fit: contain;
+                                }
+                                .square-red{
+                                    flex-shrink: 0;
+                                    height: 25px;
+                                    width: 25px;
+                                    @include flex-center;
+                                    background-color: $red;
+                                    border-radius: 5px;
+                                    color: white;
+                                }
+                                .title-red{
+                                    color:$red;
+                                }
+
+                                .pic{
+                                    flex-grow: 0;
+                                    flex-shrink: 0;
+                                    height: 75px;
+                                    width: 100px;
+                                    overflow: hidden;
+                                    border-radius: 5px;
+                                    img{
+                                        border-radius: 10px;
+                                        height: 75px;
+                                        width: 150px;
+                                        scale: 1.5;
+                                        object-fit: contain;
+                                    }
                                 }
                             }
+                            
                            
                         }
                     }
