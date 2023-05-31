@@ -120,14 +120,17 @@
                             color: white;
                             .title{
                                 margin-bottom: 1rem;
-                                font-size: 1.2rem
+                                font-size: 1.2rem;
                             }
                             .norm{
                                 margin-bottom: 0.5rem;
                             }
                             a{
                                 text-decoration: none;
-                                color: white
+                                color: white;
+                                &:hover{
+                                    color: $black;
+                                } 
                             }
                         };
                     }
