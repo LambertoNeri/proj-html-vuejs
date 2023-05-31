@@ -257,7 +257,8 @@
                                 margin-top: 0.8rem;
                                 border: none;
                                 &:hover{
-                                    color: $black;
+                                    background-color: $black;
+                                    color: white;
                                 }
                             }
                         }
