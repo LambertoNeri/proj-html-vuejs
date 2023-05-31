@@ -44,7 +44,11 @@
     font-size: 0.9rem;
     font-weight: 800;
     background-color: white;
+    &:hover{
+        color: #BF1D2E
+    }
 }
+
 
 @mixin info{
     @include flex-center;

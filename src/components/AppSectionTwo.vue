@@ -256,6 +256,9 @@
                                 cursor: pointer;
                                 margin-top: 0.8rem;
                                 border: none;
+                                &:hover{
+                                    color: $black;
+                                }
                             }
                         }
                         .pills-container{
