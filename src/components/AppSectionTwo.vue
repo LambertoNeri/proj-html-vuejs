@@ -59,27 +59,33 @@
                 bannerArr: [
                     {
                         img: 'src/assets/img/anime-fashion.webp',
-                        description: 'FASHION'
+                        description: 'FASHION',
+                        postNumber: '4 POSTS', 
                     },
                     {
                         img: 'src/assets/img/success-story.webp',
-                        description: 'CULTURE'
-                    },
+                        description: 'CULTURE',
+                        postNumber: '3 POSTS', 
+                    },  
                     {
                         img: 'src/assets/img/healthy-foods.webp',
-                        description: 'FOOD'
+                        description: 'FOOD',
+                        postNumber: '1 POST', 
                     },
                     {
                         img: 'src/assets/img/visit-france.webp',
-                        description: 'LIFESTYLE'
+                        description: 'LIFESTYLE',
+                        postNumber: '4 POSTS', 
                     },
                     {
                         img: 'src/assets/img/travel-alone.webp',
-                        description: 'STORIES'
+                        description: 'STORIES',
+                        postNumber: '5 POSTS', 
                     },
                     {
                         img: 'src/assets/img/best-places.webp',
-                        description: 'TRAVEL'
+                        description: 'TRAVEL',
+                        postNumber: '1991 POSTS', 
                     },
                 ],
 
@@ -171,6 +177,14 @@
             <div v-for="(banner, i) in bannerArr" :key="i" class="card">
                 <img :src="banner.img" alt="">
                 <span>{{ banner.description }}</span>
+                <div class="post-bg">
+                    <div class="post-container">
+                        <div class="post-number">
+                            <span>{{ banner.postNumber }}</span>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -458,6 +472,11 @@
                     flex: 0 0 calc(16.6% - 1rem);
                     position: relative;
                     height: 250px;
+                    &:hover .post-bg{
+                        display: block;
+                        cursor: pointer;
+                        @include flex-center;
+                    }
                     img{
                         width: 100%;
                         filter: invert(10%) brightness(70%);
@@ -468,10 +487,42 @@
                     span{
                         font-size: 1.5rem;
                         position: absolute;
-                        left: 35%;
-                        top: 47%;
+                        left: 32.7%;
+                        top: 46%;
                         color: white;
                         font-weight: 600;
+                        z-index: 1000;
+                    }
+                    .post-bg{
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: rgb(191, 29, 46, 0.7);
+                        border-radius: 5px;
+                        display: none;
+                        .post-container{
+                            height: 80%;
+                            width: 80%;
+                            border: 1px solid white;
+                            @include flex-center;
+                            .post-number{
+                                position: relative;
+                                height: 80%;
+                                width: 80%;
+                                border: 1px solid white;
+                                @include flex-center;
+                                span{
+                                    position: absolute;
+                                    color: white;
+                                    font-weight: 600;
+                                    top: 60%;
+                                    left: 37%;
+                                    font-size: 0.9rem;
+                                }
+                            }
+                        }
                     }
                 }
             }
