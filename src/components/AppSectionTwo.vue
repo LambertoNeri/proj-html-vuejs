@@ -193,16 +193,24 @@
                 .carousel-commands{
                     display: flex;
                     justify-content: space-between;
+                    margin-right: 1rem;
+                    padding-bottom: 0.5rem;
                     span{
                     font-size: 1.5rem;
                     font-weight: 600;
                     color: $black;
                     }
                     .chevrons{
-                    font-size: 2.2rem;
-                    display: flex;
-                    gap: 1.5rem;
-                    color: $black;
+                        font-size: 2.2rem;
+                        display: flex;
+                        gap: 1.5rem;
+                        color: $black;
+                        .fa{
+                            cursor: pointer;
+                            &:hover{
+                                color: $red;
+                            }
+                        }
                     }
                 }
                 .carousel-main{
