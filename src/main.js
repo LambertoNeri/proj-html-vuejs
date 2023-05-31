@@ -27,10 +27,13 @@ import { faUser} from "@fortawesome/free-solid-svg-icons"
 import { faChevronDown} from "@fortawesome/free-solid-svg-icons"
 import { faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons"
 import { faCalendarDays} from "@fortawesome/free-solid-svg-icons"
+import { faClock} from "@fortawesome/free-solid-svg-icons"
+import { faShare} from "@fortawesome/free-solid-svg-icons"
+import { faPlay} from "@fortawesome/free-solid-svg-icons"
 
 
 /* add icons to the library */
-library.add(faUserSecret, faCircleChevronRight, faCircleChevronLeft, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faInstagram, faYoutube, faBars, faHouse, faSuitcase, faBookOpenReader, faBook, faUser, faChevronDown, faMagnifyingGlass, faCalendarDays)
+library.add(faUserSecret, faCircleChevronRight, faCircleChevronLeft, faChevronLeft, faChevronRight, faFacebookF, faTwitter, faInstagram, faYoutube, faBars, faHouse, faSuitcase, faBookOpenReader, faBook, faUser, faChevronDown, faMagnifyingGlass, faCalendarDays, faClock, faShare, faPlay)
 
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)

@@ -1,6 +1,6 @@
 <script>
     import AppSectionOne from './AppSectionOne.vue';
-    import AppSectiontwo from './AppSectionOne.vue';
+    import AppSectiontwo from './AppSectionTwo.vue';
     import AppAdvertising from './AppAdvertising.vue';
     export default {
         components: {

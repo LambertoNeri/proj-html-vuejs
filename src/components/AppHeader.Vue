@@ -1,14 +1,4 @@
 <script>
-   /* import { library } from '@fortawesome/fontawesome-svg-core'
-
-    /* import font awesome icon component 
-    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-    /* import specific icons 
-    import { faBook } from '@fortawesome/free-solid-svg-icons'
-
-    library.add(faBook,)  */
-
     export default {
         data(){
             return{
@@ -224,27 +214,26 @@
             }
             .menu-voices{
                 ul{
-                  list-style-type: none;
-                  display: flex;
-                  flex-direction: row;
-                  gap: 2rem;
-                  li{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    gap: 0.5rem;
-                    .icon{
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                gap: 2rem;
+                    li{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 0.5rem;
+                        .icon{
                         margin-bottom: 0.2rem;
                         font-size: 0.9rem;
-                    }
-                    .fa-chevron-down{
+                        }
+                        .fa-chevron-down{
                         font-size: 0.65rem;
                         margin-bottom: 0.2rem;
                         font-weight: 800;
+                        }
                     }
-                  }
                 }
-
             }
             .search{
                 .fa-magnifying-glass{
