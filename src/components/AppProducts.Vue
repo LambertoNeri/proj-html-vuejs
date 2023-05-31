@@ -104,6 +104,10 @@
                 @include flex-center;
                 color: $red;
                 cursor: pointer;
+                &:hover{
+                    background-color: #BF1D2E;
+                    color: white;
+                }
             }
             .left{
                 position: absolute;
