@@ -164,6 +164,11 @@
                                 padding-inline: 1rem;
                                 font-size: 1.1rem;
                                 color: white;
+                                &:hover{
+                                    color: $red;
+                                    background-color: white;
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }
