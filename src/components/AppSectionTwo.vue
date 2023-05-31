@@ -406,7 +406,7 @@
                     }
                 }
                 .selection-list{
-                    overflow: hidden;
+                    overflow: auto;
                     display: flex;
                     justify-content: center;
                     width: 100%;
