@@ -79,18 +79,18 @@
         <div class="menu">
             <div class="max-width-container">
                 <div class="bars">
-                    <font-awesome-icon icon="fa-solid fa-bars" />
+                    <font-awesome-icon class="fa" icon="fa-solid fa-bars" />
                 </div>
                 <div class="menu-voices">
                     <ul>
                         <li v-for="(menuVoice, i) in menuIcons" :key="i">
-                            <font-awesome-icon class="icon" :icon='menuIcons[i].icon'/>
-                            <span>{{ menuIcons[i].menuOption }} <font-awesome-icon icon="fa-solid fa-chevron-down" /></span>
+                            <font-awesome-icon class="icon fa" :icon='menuIcons[i].icon'/>
+                            <span class="fa">{{ menuIcons[i].menuOption }} <font-awesome-icon icon="fa-solid fa-chevron-down" /></span>
                         </li>
                     </ul>
                 </div>
                 <div class="search">
-                    <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+                    <font-awesome-icon class="fa" icon="fa-solid fa-magnifying-glass" />
                 </div>
             </div>
         </div>
@@ -168,6 +168,10 @@
                     height: 30px;
                     border-radius: 30px;
                     cursor: pointer;
+                    &:hover{
+                        background-color: $black;
+                        color: white;
+                    }
                    }
                    .youtube{
                     padding-left: 0.1rem;
@@ -195,6 +199,7 @@
             .advertise{
                 img{
                     border-radius: 5px;
+                    
                 }
             }
         }
@@ -207,6 +212,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            .fa{
+                &:hover{
+                    color: $red;
+                    cursor: pointer;
+                }
+            }
             .bars{
                 .fa-bars{
                     font-size: 2rem;
