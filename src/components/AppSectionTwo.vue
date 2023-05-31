@@ -56,6 +56,33 @@
 
                 ],
 
+                bannerArr: [
+                    {
+                        img: 'src/assets/img/anime-fashion.webp',
+                        description: 'FASHION'
+                    },
+                    {
+                        img: 'src/assets/img/success-story.webp',
+                        description: 'CULTURE'
+                    },
+                    {
+                        img: 'src/assets/img/healthy-foods.webp',
+                        description: 'FOOD'
+                    },
+                    {
+                        img: 'src/assets/img/visit-france.webp',
+                        description: 'LIFESTYLE'
+                    },
+                    {
+                        img: 'src/assets/img/travel-alone.webp',
+                        description: 'STORIES'
+                    },
+                    {
+                        img: 'src/assets/img/best-places.webp',
+                        description: 'TRAVEL'
+                    },
+                ],
+
             };
         },
     }
@@ -138,8 +165,13 @@
                     </ul>
                 </div>
             </div>
+        </div>
 
-
+        <div class="banner-end">
+            <div v-for="(banner, i) in bannerArr" :key="i" class="card">
+                <img :src="banner.img" alt="">
+                <span>{{ banner.description }}</span>
+            </div>
         </div>
     </div>
 </template>
@@ -402,5 +434,34 @@
                 }
             }
         }
+        .banner-end{
+                margin-top: 3rem;
+                display: flex;
+                gap: 1rem;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 1rem;
+
+                .card{
+                    flex: 0 0 calc(16.6% - 1rem);
+                    position: relative;
+                    height: 250px;
+                    img{
+                        width: 100%;
+                        filter: invert(10%) brightness(70%);
+                        border-radius: 5px;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    span{
+                        font-size: 1.5rem;
+                        position: absolute;
+                        left: 35%;
+                        top: 47%;
+                        color: white;
+                        font-weight: 600;
+                    }
+                }
+            }
     }
 </style>
