@@ -167,7 +167,7 @@
             </div>
         </div>
 
-        <div class="banner-end">
+        <div class="end-banner">
             <div v-for="(banner, i) in bannerArr" :key="i" class="card">
                 <img :src="banner.img" alt="">
                 <span>{{ banner.description }}</span>
@@ -434,7 +434,7 @@
                 }
             }
         }
-        .banner-end{
+        .end-banner{
                 margin-top: 3rem;
                 display: flex;
                 gap: 1rem;
